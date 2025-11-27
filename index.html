@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cloud لحل المعادلات</title>
+</head>
+<body>
+    <h2>حل المعادلات الرياضية</h2>
+
+    <form method="POST" action="/solve">
+        <input type="text" name="expression" placeholder="مثال: 2+3*4" value="{{ expr }}">
+        <button type="submit">حل</button>
+    </form>
+
+    {% if answer %}
+        <h3>النتيجة: {{ answer }}</h3>
+    {% endif %}
+</body>
+</html>
